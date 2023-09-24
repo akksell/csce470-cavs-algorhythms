@@ -28,14 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${srcCode.variable} ${rubik.variable}`}>
       <head>
-        <meta name="description" content="Welcome to Cav's Algorhythms! This is an SEO project for Cav's CSCE 470 class. Our record store is named Cav's Algorhythms." />
       </head>
       <body>
-        <div className='min-h-screen flex justify-center items-center'>
-          <div className='container mx-auto px-4 md:border md:border-violet-500'>
-            {children}
-          </div>
-        </div>
+        {children}
         <Analytics />
       </body>
     </html>

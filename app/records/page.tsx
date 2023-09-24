@@ -68,7 +68,7 @@ const RecordsPage = () => {
   }, [query]);
 
   return (
-    <>
+    <div className='container mx-auto px-4'>
       <Head>
         <title>Search For Records | Cav&apos;s Algorhythms </title>
       </Head>
@@ -105,7 +105,7 @@ const RecordsPage = () => {
           }
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
