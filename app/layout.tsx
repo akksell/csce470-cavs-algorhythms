@@ -1,8 +1,16 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Rubik_Mono_One, Source_Code_Pro } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const rubik = Rubik_Mono_One({ 
+  weight: '400',
+  variable: '--font-rubik-mono',
+  subsets: ['latin']
+})
+const srcCode = Source_Code_Pro({
+  variable: '--font-src-code',
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: "Cav's Algorhythms",
@@ -16,11 +24,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${srcCode.variable} ${rubik.variable}`}>
       <head>
         <meta name="description" content="Welcome to Cav's Algorhythms! This is an SEO project for Cav's CSCE 470 class. Our record store is named Cav's Algorhythms." />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body>
+        <div className=''>
+          <div className='container mx-auto px-4'>
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   )
 }
