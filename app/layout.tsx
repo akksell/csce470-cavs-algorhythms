@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Rubik_Mono_One, Source_Code_Pro } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react';
 
 const rubik = Rubik_Mono_One({ 
   weight: '400',
@@ -34,6 +35,7 @@ export default function RootLayout({
             {children}
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   )
