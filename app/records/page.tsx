@@ -29,8 +29,8 @@ const reduceTrack = (track: { album: {}, id: string, artists: [], external_urls:
 }
 
 const RecordsPage = () => {
-  const [query, setQuery] = useState('')
-  const [songs, setSongs] = useState([])
+  const [query, setQuery] = useState<string>('')
+  const [songs, setSongs] = useState<Array<Object>>([])
 
   const getTracks = async () => {
     const body = {
@@ -45,7 +45,7 @@ const RecordsPage = () => {
     const { res } = response
     const { tracks } = res
     const { items } = tracks
-    const songs: [] = map(items, (song: { album: {}, id: string, artists: [], external_urls: {} }) => reduceTrack(song))
+    const songs: Array<Object> = map(items, (song: { album: {}, id: string, artists: [], external_urls: {} }) => reduceTrack(song))
     setSongs(songs)
   }
 
