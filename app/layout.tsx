@@ -15,8 +15,9 @@ const srcCode = Source_Code_Pro({
 
 export const metadata: Metadata = {
   title: "Cav's Algorhythms",
-  description: "Welcome to Cav's Algorhythms! This is an SEO project for Cav's CSCE 470 class. Our record store is named Cav's Algorhythms.",
-  robots: "index, follow"
+  description: "Cav's AlgoRhythms: The music meets algorithms hub, a Texas A&M CSCE 470 project. Dive into vinyl treasures supporting student learning and web development. Groove with us!",
+  robots: "index, follow",
+  
 }
 
 export default function RootLayout({
@@ -30,8 +31,8 @@ export default function RootLayout({
         <meta name="description" content="Welcome to Cav's Algorhythms! This is an SEO project for Cav's CSCE 470 class. Our record store is named Cav's Algorhythms." />
       </head>
       <body>
-        <div className=''>
-          <div className='container mx-auto px-4'>
+        <div className='min-h-screen flex justify-center items-center'>
+          <div className='container mx-auto px-4 md:border md:border-violet-500'>
             {children}
           </div>
         </div>
